@@ -39,13 +39,13 @@ jobs:
       with:
         ref: ${{ github.head_ref }}
  
-    - name: Render terraform docs and push changes back to PR
-      uses: terraform-docs/gh-actions@main
-      with:
-        #working-dir: ./use-case-05
-        output-file: README.md
-        output-method: inject
-        git-push: "true"
+ #   - name: Render terraform docs and push changes back to PR
+  #    uses: terraform-docs/gh-actions@main
+   #   with:
+    #    #working-dir: ./use-case-05
+     #   output-file: README.md
+      #  output-method: inject
+       # git-push: "true"
  
     - name: Configure AWS credentials via OIDC
       uses: aws-actions/configure-aws-credentials@v2
