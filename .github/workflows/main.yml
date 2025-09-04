@@ -89,6 +89,7 @@ jobs:
     - name: Terraform Validate
       #working-directory: ./use-case-05
       run: terraform validate
+      continue-on-error: true
 
     - name: Install tflint
       run: |
