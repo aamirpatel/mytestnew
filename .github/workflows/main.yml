@@ -68,7 +68,7 @@ jobs:
 
     - name: Install  dependencies and create ZIP
       run: |
-        cd use-case-05/files/js
+        cd files/
         npm install 
         zip -r ../../files/js/image_resizer.zip .
 
@@ -77,16 +77,16 @@ jobs:
  
  
     - name: Terraform Init
-      working-directory: ./use-case-05
+      #working-directory: ./use-case-05
       run: terraform init
 
     - name: Terraform test
-      working-directory: ./use-case-05
+      #working-directory: ./use-case-05
       run: terraform test -verbose
       continue-on-error: true
  
     - name: Terraform Validate
-      working-directory: ./use-case-05
+      #working-directory: ./use-case-05
       run: terraform validate
 
     - name: Install tflint
