@@ -69,7 +69,8 @@ jobs:
     - name: Install  dependencies and create ZIP
       run: |
         cd ./files
-        npm install 
+        npm install
+        mkdir -p ../../files/js/
         zip -r ../../files/js/image_resizer.zip .
 
     - name: Terraform Format Check
